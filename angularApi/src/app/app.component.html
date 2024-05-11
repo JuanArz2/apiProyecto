@@ -1,0 +1,38 @@
+<header class="text-center my-4">
+  <h1>Do u wanna a Fruit?</h1>
+  <h6>Well... we have all the info that u need</h6>
+</header>
+
+<main class="container d-flex flex-wrap justify-content-center gap-3">
+  @for(fruta of allData; track fruta.id){
+  <div class="card" style="width: 18rem">
+    <div class="card-body">
+      <h4 class="card-title">{{ fruta.name }}</h4>
+
+      <h6
+        style="font-size: 14px"
+        class="card-subtitle mb-2 text-body-secondary"
+      >
+        Familia: {{ fruta.family }} <br />
+        Genero: {{ fruta.genus }}
+      </h6>
+
+      <div>Cada 100 gramos tenemos:</div>
+
+      <p class="card-text">
+        Calorías: {{ fruta.nutritions.calories }}<br />
+        Carbohidratos: {{ fruta.nutritions.carbohydrates }}<br />
+        Grasa: {{ fruta.nutritions.fat }}<br />
+        Proteína: {{ fruta.nutritions.protein }}<br />
+        Azúcar x100g: {{ fruta.nutritions.sugar }} <br />
+      </p>
+
+      <a href="#" class="card-link">Image</a>
+      <a href="#" class="card-link">Link</a>
+    </div>
+  </div>
+  }
+</main>
+
+<footer class="text-center my-5">_acá el footer_</footer>
+<!-- <router-outlet /> -->
